@@ -1,0 +1,4 @@
+export CLICOLOR=1
+export EDITOR="vim"
+
+export PS1="\[\e[00;37m\]\W \\$ \[\e[0m\]"

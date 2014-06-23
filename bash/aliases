@@ -1,0 +1,16 @@
+# General
+alias ls='ls -F'
+alias v='vim'
+alias ..='cd ..'
+
+# Git
+alias gst='git status'
+alias gc='git commit'
+alias gd='git diff'
+alias gc='git branch'
+alias gco='git checkout'
+alias ga='git add'
+
+# Ruby and Rails
+alias be='bundle exec'
+alias ber='bundle exec rspec'
