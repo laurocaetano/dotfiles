@@ -1,4 +1,10 @@
 export CLICOLOR=1
 export EDITOR="vim"
 
-export PS1="\[\e[00;37m\]\W \\$ \[\e[0m\]"
+# Git config.
+source ~/.dotfiles/bin/git-prompt.sh
+
+export PS1="\[\e[00;37m\]\W \$(__git_ps1) "
+
+# autojump
+[[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
