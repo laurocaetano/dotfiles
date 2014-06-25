@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cp bash/bash_profile ~/.bash_profile
+cp ~/.dotfiles/bash/bash_profile ~/.bash_profile
