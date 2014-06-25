@@ -7,7 +7,7 @@ alias ..='cd ..'
 alias gst='git status'
 alias gc='git commit'
 alias gd='git diff'
-alias gc='git branch'
+alias gb='git branch'
 alias gco='git checkout'
 alias ga='git add'
 
