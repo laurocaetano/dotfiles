@@ -3,6 +3,7 @@ export EDITOR="vim"
 
 # Git config.
 source ~/.dotfiles/bin/git-prompt.sh
+source ~/.dotfiles/bin/git-completion.sh
 
 export PS1="\[\e[00;37m\]\W \$(__git_ps1) "
 
