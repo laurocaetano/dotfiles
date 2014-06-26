@@ -1,3 +1,4 @@
 #!/bin/sh
 
-cp ~/.dotfiles/bash/bash_profile ~/.bash_profile
+rm ~/.bash_profile
+ln -s ~/.dotfiles/bash/bash_profile ~/.bash_profile
