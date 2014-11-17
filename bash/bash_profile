@@ -1,5 +1,2 @@
-source /opt/boxen/env.sh
-# Remove this after removing boxen.
-
 source ~/.dotfiles/bash/aliases
 source ~/.dotfiles/bash/env
