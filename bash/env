@@ -1,6 +1,9 @@
 export CLICOLOR=1
 export EDITOR="vim"
 
+# Gifify
+source ~/.dotfiles/bin/gifify.sh
+
 # Git config.
 source ~/.dotfiles/bin/git-prompt.sh
 source ~/.dotfiles/bin/git-completion.sh
