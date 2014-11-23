@@ -16,3 +16,6 @@ export PS1="\[\e[00;37m\]\W\$(__git_ps1) \[\e[00;37m\]\\$\[\e[0m\] "
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# play configuration
+export PATH="$HOME/.play:$PATH"
