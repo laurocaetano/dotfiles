@@ -2,8 +2,9 @@ export CLICOLOR=1
 export EDITOR="vim"
 
 # Git config.
-source ~/.dotfiles/bin/git-prompt.sh
 source ~/.dotfiles/bin/git-completion.sh
 source ~/.dotfiles/bin/common-functions.sh
 
-export PS1="\[\e[00;37m\]\W\$(__git_ps1) \[\e[00;37m\]\\$\[\e[0m\] "
+# starship
+export STARSHIP_CONFIG="$HOME/.starship"
+eval "$(starship init bash)"

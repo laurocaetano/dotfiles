@@ -2,6 +2,11 @@
 alias ls='ls -F'
 alias v='vim'
 alias ..='cd ..'
+alias e=$EDITOR
+alias grep='grep --color=auto'
+alias diff=colordiff
+alias la='ls -alh'
+alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
 
 # Git
 alias gst='git status'
@@ -10,7 +15,4 @@ alias gd='git diff'
 alias gb='git branch'
 alias gco='git checkout'
 alias ga='git add'
-
-# Ruby and Rails
-alias be='bundle exec'
-alias ber='bundle exec rspec'
+alias me='git config --local user.email laurocaetano1@gmail.com'

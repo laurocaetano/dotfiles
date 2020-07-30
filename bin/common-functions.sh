@@ -1,3 +1,5 @@
-deleteGitBranches() {
-  git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d
+deleteAllBranchesAndKeepMaster() {
+  git checkout master
+  git pull origin master
+  git branch | grep -v "master" | xargs git branch -D
 }
