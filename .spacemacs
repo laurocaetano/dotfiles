@@ -46,6 +46,7 @@ values."
      (go :variables
          go-backend 'lsp
          gofmt-command "goimports"
+         go-tab-width 4
          go-format-before-save t)
      (rust :variables
            rust-format-on-save t)
@@ -65,7 +66,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(kaolin-themes
+                                      ample-theme
+                                      doom-themes)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -137,14 +140,15 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(doom-monokai-machine
+                         spacemacs-dark
                          spacemacs-light)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+   dotspacemacs-default-font '("Fira Code"
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -337,3 +341,76 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#273136" "#ff6d7e" "#a2e57b" "#ffed72" "#7cd5f1" "#7cd5f1" "#7cd5f1" "#f2fffc"])
+ '(custom-safe-themes
+   '("4a5aa2ccb3fa837f322276c060ea8a3d10181fecbd1b74cb97df8e191b214313" "e19ac4ef0f028f503b1ccafa7c337021834ce0d1a2bca03fcebc1ef635776bea" "d9a28a009cda74d1d53b1fbd050f31af7a1a105aa2d53738e9aa2515908cac4c" "3c7a784b90f7abebb213869a21e84da462c26a1fda7e5bd0ffebf6ba12dbd041" "36ca8f60565af20ef4f30783aa16a26d96c02df7b4e54e9900a5138fb33808da" "e8567ee21a39c68dbf20e40d29a0f6c1c05681935a41e206f142ab83126153ca" "06ed754b259cb54c30c658502f843937ff19f8b53597ac28577ec33bb084fa52" "733ef3e3ffcca378df65a5b28db91bf1eeb37b04d769eda28c85980a6df5fa37" default))
+ '(evil-want-Y-yank-to-eol nil)
+ '(exwm-floating-border-color "#3c454a")
+ '(fci-rule-color "#5a6568")
+ '(highlight-tail-colors ((("#33433c") . 0) (("#2f4148") . 20)))
+ '(hl-todo-keyword-faces
+   '(("TODO" . "#dc752f")
+     ("NEXT" . "#dc752f")
+     ("THEM" . "#2d9574")
+     ("PROG" . "#4f97d7")
+     ("OKAY" . "#4f97d7")
+     ("DONT" . "#f2241f")
+     ("FAIL" . "#f2241f")
+     ("DONE" . "#86dc2f")
+     ("NOTE" . "#b1951d")
+     ("KLUDGE" . "#b1951d")
+     ("HACK" . "#b1951d")
+     ("TEMP" . "#b1951d")
+     ("FIXME" . "#dc752f")
+     ("XXX+" . "#dc752f")
+     ("\\?\\?\\?+" . "#dc752f")))
+ '(jdee-db-active-breakpoint-face-colors (cons "#131313" "#ffed72"))
+ '(jdee-db-requested-breakpoint-face-colors (cons "#131313" "#a2e57b"))
+ '(jdee-db-spec-breakpoint-face-colors (cons "#131313" "#545f62"))
+ '(objed-cursor-color "#ff6d7e")
+ '(package-selected-packages
+   '(doom-themes ample-theme zeal-at-point toml-mode smeargle racer orgit mmm-mode markdown-toc magit-gitflow magit-popup helm-gitignore helm-dash dash-docs helm-company helm-c-yasnippet go-guru go-eldoc gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-popup flyspell-correct-helm flyspell-correct flycheck-rust flycheck-pos-tip pos-tip flycheck evil-magit magit git-commit with-editor transient diff-hl company-statistics company-go go-mode company cargo markdown-mode rust-mode auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired f evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg eval-sexp-fu elisp-slime-nav dumb-jump dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))
+ '(pdf-view-midnight-colors '("#b2b2b2" . "#292b2e"))
+ '(rustic-ansi-faces
+   ["#273136" "#ff6d7e" "#a2e57b" "#ffed72" "#7cd5f1" "#7cd5f1" "#7cd5f1" "#f2fffc"])
+ '(vc-annotate-background "#273136")
+ '(vc-annotate-color-map
+   (list
+    (cons 20 "#a2e57b")
+    (cons 40 "#c1e778")
+    (cons 60 "#e0ea75")
+    (cons 80 "#ffed72")
+    (cons 100 "#ffd971")
+    (cons 120 "#ffc570")
+    (cons 140 "#ffb270")
+    (cons 160 "#d3bd9b")
+    (cons 180 "#a7c9c6")
+    (cons 200 "#7cd5f1")
+    (cons 220 "#a7b2ca")
+    (cons 240 "#d38fa4")
+    (cons 260 "#ff6d7e")
+    (cons 280 "#d46977")
+    (cons 300 "#a96670")
+    (cons 320 "#7e6269")
+    (cons 340 "#5a6568")
+    (cons 360 "#5a6568")))
+ '(vc-annotate-very-old-color nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
