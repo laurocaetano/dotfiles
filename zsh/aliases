@@ -6,7 +6,7 @@ alias e=$EDITOR
 alias grep='grep --color=auto'
 alias diff=colordiff
 alias la='ls -alh'
-alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
+alias reload='source ~/.zshrc && echo "sourced ~/.zshrc"'
 
 # Git
 alias gst='git status'

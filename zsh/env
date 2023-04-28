@@ -1,0 +1,10 @@
+export CLICOLOR=1
+export EDITOR="vim"
+
+# starship
+export STARSHIP_CONFIG="$HOME/.starship"
+eval "$(starship init zsh)"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+autoload -Uz compinit && compinit
